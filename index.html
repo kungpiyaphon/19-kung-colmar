@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>19-kung-colmar</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <style>
+        *{
+            outline: 1px solid red;
+        }
+    </style>
 </head>
 <body>
     <!-- <h1>19-kung-colmar</h1> -->
-     <header class="flex items-center justify-between h-[64px] p-[24px]">
-        <a href="#" class="flex h-[32px]">
-            <div>
-                <img src="./images/ic-logo.svg" alt="Colmar academy logo">
-            </div>
+     <header class="flex items-center justify-between sticky top-0 bg-white h-[64px] p-[24px]">
+        <a href="#" class="hidden md:flex h-[32px]">
+            <img src="./images/ic-logo.svg" alt="Colmar academy logo">
             <div class="font-bold">COLMAR</div>
             <div>ACADEMY</div>
         </a>
-        <nav class="flex items-center">
+        <nav class="hidden md:flex items-center">
             <ul class="flex items-center gap-[16px]">
                 <li>On campus</li>
                 <li>Online</li>
@@ -25,29 +27,36 @@
                 <li>Sign in</li>
             </ul>
         </nav>
+
+        <nav class="flex justify-around w-full h-[64px] md:hidden bg-white py-2">
+            <ul class="flex justify-around items-center w-full">
+                <li><a href="#"><img src="./images/ic-logo.svg" alt="Colmar academy logo" class="h-6"></a></li>
+                <li><a href="#"><img src="./images/ic-on-campus.svg" alt="on campus" class="h-6"></a></li>
+                <li><a href="#"><img src="./images/ic-online.svg" alt="online" class="h-6"></a></li>
+                <li><a href="#"><img src="./images/ic-login.svg" alt="login" class="h-6"></a></li>
+            </ul>
+        </nav>
      </header>
 
      <main>
         
         <!-- hero -->
-        <section class="flex flex-col lg:flex-row ml-[24px] my-[32px] gap-[24px]">
-            <div class="w-[60%]">
-                <figure>
+        <section class="flex flex-col md:flex-row pl-[24px] py-[32px] gap-[24px] bg-[#D8D8D8]">
+            <figure class="w-[60%]">
                     <img src="./images/banner.jpg" alt="banner">
-                </figure>
-            </div>
-            <div class="flex flex-col justify-center gap-[32px]">
-                <h1 class="text-[48px]"> Learn something <br>new everyday </h1>
+            </figure>
+            <div class="flex flex-col justify-center gap-[32px] p-[16px]">
+                <h1 class="text-[3rem] font-bold"> Learn something <br>new everyday </h1>
                 <p class="text-[32px]"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                 <a href="#" target="_blank"
-                class="inline-block text-white text-[32px] py-[8px] px-[16px] bg-gray-800 "
+                class=" text-white text-[32px] text-center py-[8px] px-[16px] bg-gray-800 "
                 >Start here</a>
             </div>
         </section>
         
-        <!-- infomation -->
-         <section class="flex flex-col lg:flex-row pl-[24px] gap-[24px]">
-            <div class="w-[60%]">
+        <!-- information -->
+         <section class="flex flex-col md:flex-row pl-[24px] gap-[24px]">
+            <div class="max-sm:hidden md:w-[60%]">
                 <figure>
                     <img src="./images/information-main.jpg" alt="information main"
                     >
@@ -59,7 +68,7 @@
             <div>
                 <div class="flex flex-col lg:flex-row justify-center">
                     <figure class="px-[16px] py-[16px]">
-                        <img src="./images/information-orientation.jpg" alt="information orientation">
+                        <img src="./images/information-orientation.jpg" alt="information orientation" class="max-sm:hidden">
                     </figure>
                     <div class="flex flex-col justify-center">
                         <p class="text-[32px] font-semibold">Orientation date</p>
@@ -93,60 +102,60 @@
          <!-- course -->
           <section class="bg-gray-200">
             <h3 class="text-[64px] text-center font-semibold mx-[32px] my-[32px]"> Start learning </h3>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-[32px] mx-[72px] my-[32px] pb-[32px]">
-                <div class="bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-[32px] mx-[72px] my-[32px] pb-[32px]">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="./images/course-software.jpg" alt="course software"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Software engineering</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">Web Development, Mobile <br>Development, iOT, APIs</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Software engineering</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">Web Development, Mobile <br>Development, iOT, APIs</p>
                 </div>
-                <div class="bg-white">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="./images/course-computer-art.jpg" alt="course computer art"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Computer art</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">Imaging & Design, Web Design, <br>Motion Graphics & Visual Effects, <br>Computer Animation</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Computer art</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">Imaging & Design, Web Design, <br>Motion Graphics & Visual Effects, <br>Computer Animation</p>
                 </div>
-                <div class="bg-white">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="./images/course-design.jpg" alt="course design"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Design</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">User Experience Design, User <br>Research, Visual Design</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Design</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">User Experience Design, User <br>Research, Visual Design</p>
                 </div>
-                <div class="bg-white">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="/images/course-data.jpg" alt="course data"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Data</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">Data Science, Big Data, SQL, Data <br>Visualization</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Data</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">Data Science, Big Data, SQL, Data <br>Visualization</p>
                 </div>
-                <div class="bg-white">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="./images/course-business.jpg" alt="course business"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Business</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">Product Development, Business <br>Development, Startup</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Business</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">Product Development, Business <br>Development, Startup</p>
                 </div>
-                <div class="bg-white">
+                <div class="bg-white max-sm:bg-[#D8D8D8]">
                     <figure>
                         <img src="./images/course-marketing.jpg" alt="course marketing"
-                        class="w-full h-auto">
+                        class="w-full h-auto max-sm:hidden">
                     </figure>
-                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px]">Marketing</p>
-                    <p class="text-[18px] pl-[16px] py-[8px]">COURSES</p>
-                    <p class="text-[16px] pl-[16px] pb-[24px]">Analytics, Content Marketing, <br>Mobile Marketing</p>
+                    <p class="text-[22px] font-semibold pl-[16px] pb-[16px] max-sm:text[28px] text-center">Marketing</p>
+                    <p class="text-[18px] pl-[16px] py-[8px] max-sm:hidden">COURSES</p>
+                    <p class="text-[16px] pl-[16px] pb-[24px] max-sm:hidden">Analytics, Content Marketing, <br>Mobile Marketing</p>
                 </div>
             </div>
           </section>
@@ -154,15 +163,15 @@
           <!-- Thesis exhibit -->
            <section class="pl-[24px] gap-[24px]">
             <h3 class="text-[64px] text-center font-semibold mx-[32px] my-[32px]"> Thesis exhibit </h3>
-            <div class="flex">
-                <div class="w-[60%] h-auto">
+            <div class="flex max-sm:justify-center">
+                <div class="w-[60%] h-auto max-sm:w-full ">
                     <video controls>
                         <source src="./videos/thesis.mp4" type="video/mp4">
                     </video>
-                    <h4 class="text-[2rem] pt-[24px] pb-[8px]">Reimagine urban</h4>
-                    <p class="text-[1rem] mb-[32px]">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, pariatur minima velit <br>porro est recusandae! Nemo nesciunt dolore aut similique natus commodi, corporis asperiores <br>reprehenderit dignissimos. Est dolor beatae eius quaerat."</p>
+                    <h4 class="text-[2rem] pt-[24px] pb-[8px] max-sm:hidden">Reimagine urban</h4>
+                    <p class="text-[1rem] mb-[32px] max-sm:hidden">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, pariatur minima velit <br>porro est recusandae! Nemo nesciunt dolore aut similique natus commodi, corporis asperiores <br>reprehenderit dignissimos. Est dolor beatae eius quaerat."</p>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col max-sm:hidden">
                     <div class="">
                         <div class="flex flex-row p-[16px] gap-[16px]">
                             <figure class="w-[35%]">
@@ -189,9 +198,9 @@
             </div>
            </section>
            <hr>
-          <footer class="flex justify-between px-[24px] py-[16px]">
+          <footer class="flex justify-between px-[24px] py-[16px] max-sm:justify-center">
             <div>© 2016 Colmar Academy. All rights reserved</div>
-            <div>
+            <div class="max-sm:hidden">
                 <a href="#"> Terms </a>
                 <a href="#"> Privacy </a>
             </div>
